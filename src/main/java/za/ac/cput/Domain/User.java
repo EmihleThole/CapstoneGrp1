@@ -11,7 +11,7 @@ import java.time.LocalDate;
 public class User {
  @Id
  @GeneratedValue(strategy = GenerationType.IDENTITY)
- private String UserId;
+ private int UserId;
  private String UserName;
  private String UserSurname;
  private Long IdNumber;
@@ -30,7 +30,7 @@ public class User {
     this.Email = builder.Email;
     }
 
- public String getUserId() {
+ public int getUserId() {
   return UserId;
  }
 
@@ -71,7 +71,7 @@ public class User {
           '}';
  }
     public static class Builder {
-    private String UserId;
+    private int UserId;
     private String UserName;
     private String UserSurname;
     private Long IdNumber;
@@ -79,7 +79,7 @@ public class User {
     private String PhoneNumber;
     private String Email;
 
-    public Builder setUserId(String userId) {
+    public Builder setUserId(int userId) {
     this.UserId = userId;
     return this;
     }

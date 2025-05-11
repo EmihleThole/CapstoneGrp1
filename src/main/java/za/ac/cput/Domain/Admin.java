@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 public class Admin {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String adminId;
+    private int adminId;
     private String adminName;
     private String adminSurname;
     private Long idNumber;
@@ -28,7 +28,7 @@ public class Admin {
         this.email = builder.email;
     }
 
-    public String getAdminId() {
+    public int getAdminId() {
         return adminId;
     }
 
@@ -65,14 +65,14 @@ public class Admin {
     }
 
     public static class Builder {
-        private String adminId;
+        private int adminId;
         private String adminName;
         private String adminSurname;
         private Long idNumber;
         private String phoneNumber;
         private String email;
 
-        public Builder setAdminId(String adminId) {
+        public Builder setAdminId(int adminId) {
             this.adminId = adminId;
             return this;
         }
